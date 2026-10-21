@@ -1,7 +1,10 @@
 # Czech Bank Dormant Account Analysis
 
 **A SQL analysis in MySQL Workbench on over 1 million bank transactions: which accounts go quiet, and what did they look like before they did?**
+
 [Full report: Czech Bank Dormant Analysis Report (PDF)](./Czech_bank_dormant_analysis_report.pdf)
+
+**ER Diagram**
 ![Entity relationship diagram](output_views/data_model.png)
 
 ## Summary
@@ -103,10 +106,15 @@ An account usually changes its behaviour in the months before it goes quiet, so 
 ### Dormant vs active
 
 ![Account age](output_views/grp_sccount_avg_age.png)
+
 ![Account owner age](output_views/grp_owner_age.png)
+
 ![Average amount per transaction](output_views/grp_avg_amount.png)
+
 ![Accounts with a card](output_views/has_a_card.png)
+
 ![Accounts with a loan](output_views/has_a_loan.png)
+
 ![Accounts with a standing order](output_views/has_a_order.png)
 
 - **Account age:** Dormant accounts are slightly older (3.7 years on average against 3.4). Both groups range from about 1 to 6 years.
@@ -121,9 +129,13 @@ Dormant accounts use the bank's other services far less than active accounts. Th
 ### Behaviour in the last 6 months
 
 ![Last customer transactions of dormant accounts](output_views/dormant_lxt_trnx.png)
+
 ![Activity of each dormant account in the 6 months before going quiet](output_views/last_6m_dormant_activity.png)
+
 ![Active vs dormant activity in the last 6 months](output_views/active_vs_dormant_actvity_last_6m.png)
+
 ![Debits and credits per dormant account](output_views/each_dormant_no_of_debit_credit.png)
+
 ![Debits and credits across all dormant accounts](output_views/last_6m_dormant_total_debit_credit.png)
 
 - **Transactions:** Dormant accounts averaged 7.3 customer transactions in their last 6 months, against 22.7 for active accounts. That is about a third as many.
